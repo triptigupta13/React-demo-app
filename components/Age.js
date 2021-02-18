@@ -1,6 +1,7 @@
 import React from 'react';
-import {View,Text,Button, ActivityIndicator} from 'react-native';
+import {View,Text,Button,Alert, ActivityIndicator} from 'react-native';
 import axios from 'axios';
+import {navigation} from "react-navigation";
 
 
 export default class Age extends React.Component{
@@ -15,7 +16,7 @@ export default class Age extends React.Component{
     componentDidMount(){
         axios.get('https://api.agify.io', {
             params: {
-              name: "abcd"
+              name: this.props.navigation.getParam('name','No-name')
             }
           })
           .then((response) => {

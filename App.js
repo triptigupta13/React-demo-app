@@ -13,6 +13,9 @@ import Age from './components/Age';
 
 
 const Navigator = createStackNavigator({
+  Choose: {
+    screen: Choose
+  },
   Age: {
     screen: Age
   },
@@ -25,9 +28,7 @@ const SwitchNavigator = createSwitchNavigator({
   Home: {
     screen: Home
   },
-  Choose: {
-    screen: Choose
-  },
+  
   navigator: Navigator
 })
 
